@@ -7,32 +7,32 @@
 </template>
 <script>
 export default {
-  name: "component-a",
-  data() {
+  name: 'component-a',
+  data () {
     return {
       treeData: [
         {
-          title: "树形标题一",
+          title: '树形标题一',
           expand: true,
           children: [
             {
-              title: "子标题1",
+              title: '子标题1',
               expand: true
             },
             {
-              title: "子标题2",
+              title: '子标题2',
               expand: true,
               children: [
                 {
-                  title: "子标题2.1",
+                  title: '子标题2.1',
                   expand: true
                 },
                 {
-                  title: "子标题2.2",
+                  title: '子标题2.2',
                   expand: true
                 },
                 {
-                  title: "子标题2.3",
+                  title: '子标题2.3',
                   expand: true
                 }
               ]
@@ -41,13 +41,13 @@ export default {
         }
       ],
       count: 0
-    };
+    }
   },
   components: {
     // 自定义组件
     tree: {
       // 组件的名称
-      name: "tree",
+      name: 'tree',
       // 模板
       template: ` 
             <ul>
@@ -58,14 +58,14 @@ export default {
                </li>
             </ul>`,
       // 通过父组件传递的数据
-      props: ["treeData"]
+      props: ['treeData']
     }
   },
   methods: {
-    counter: function() {
-      console.log(1111, this.count);
-      this.count++;
+    counter: function () {
+      console.log(1111, this.count)
+      this.count++
     }
   }
-};
+}
 </script>
